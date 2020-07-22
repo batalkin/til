@@ -35,6 +35,6 @@ This lead to a sad compilation error
 
 To compile a mixed codebase Kotlin compiler should be invoked before Java compiler. Kotlin compiler still compiles java classes to check that Kotlin classes are valid but **it does not run annotation processors**. So Lombok code is not yet generated when Kotlin classes are compiled.  
 
-There are some options to around it and ran delombok maven plugin to generate java files without annotation before compilation. This option is a bit messy since original annotated classes need to place in some odd place like `src/main/lombok`.
+There are some options to go around it and run delombok maven plugin to generate java files without annotation before compilation. This option is a bit messy since original annotated classes need to be placed in some odd location like `src/main/lombok`.
 
 What I did when faced this issue? Rewrote my class from Kotlin to Java.
